@@ -1,5 +1,5 @@
+# Parte A. Conceptos y lectura de código**
 
-**Parte A. Conceptos y lectura de código**
 1) Atributos accesibles desde a: Existen A, B y D; C no. (Existen a.x, a._y y a._A__z; a.__z no).
    
 2) Salida:
