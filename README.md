@@ -35,31 +35,23 @@ print(s._S__data)
 # Parte B. Encapsulación con @property y validación**
 
 11) `saldo` nunca negativo:
-    
 class Cuenta:
-
   def __init__(self, saldo):
-  
     self._saldo = 0
-    
     self.saldo = saldo
     
     
 @property
 
 def saldo(self):
-
   return self._saldo
-  
     @saldo.setter
     
     
 def saldo(self, value):
 
   if value < 0:
-  
     raise ValueError("El saldo no puede ser negativo")
-    
     self._saldo = value
     
 
@@ -67,9 +59,7 @@ def saldo(self, value):
 12) Propiedad de solo lectura temperatura_f:
     
   class Termometro:
-
     def __init__(self, temperatura_c):
-    
     self._c = float(temperatura_c)
     
   @property
@@ -79,12 +69,9 @@ def saldo(self, value):
   return self._c * 9/5 + 32
   
 
-15) `nombre` siempre str:
-    
+13) `nombre` siempre str:
   class Usuario:
-
     def __init__(self, nombre):
-    
     self.nombre = nombre
     
 
