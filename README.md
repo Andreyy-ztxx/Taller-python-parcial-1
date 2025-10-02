@@ -15,7 +15,7 @@ restricción real.
 
 5) Name mangling en herencia:
 (2, 1)
-# Sub.__v -> _Sub__v = 2 y Base.__v -> _Base__v = 1
+Sub.__v -> _Sub__v = 2 y Base.__v -> _Base__v = 1
 
 6) Identifica el error: con __slots__ = ('x',) solo se permiten atributos listados; al hacer c.y = 20 lanza
 AttributeError.
@@ -25,14 +25,14 @@ self._dato = 99
 
 8) Métodos “privados”: imprime:
 True False True
-# Existe _step; __tick no (mangleado); _M__tick sí.
+Existe _step; __tick no (mangleado); _M__tick sí.
 
 9) Acceso a __data (solo para comprobar):
 print(s._S__data)
 
 10) dir y mangling: el nombre más probable es '_D__a', porque '__a' se manglea; 'a' no es un atributo.
 
-**Parte B. Encapsulación con @property y validación**
+# Parte B. Encapsulación con @property y validación**
 
 11) `saldo` nunca negativo:
 class Cuenta:
@@ -116,7 +116,7 @@ no debe tocarse desde fuera.
     
 def get_data(self):
   return self._data # devuelve la lista interna (se puede mutar desde fuera)
-# Corrección (devolver copia o tupla):
+ Corrección (devolver copia o tupla):
   def get_data(self):
   return tuple(self._data) # o: return self._data.copy()
 
@@ -162,7 +162,7 @@ return self._get_x()
     def inc(self):
       self._n += 1
       self.__log()
-  # Uso básico
+   Uso básico
     c = ContadorSeguro()
     c.inc() # imprime: tick
     c.inc() # imprime: tick
