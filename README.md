@@ -222,3 +222,13 @@ class ContadorSeguro:
         self._log()
 
 
+#USO BASICO
+
+
+c = ContadorSeguro()
+c.inc()  # imprime: tick
+c.inc()  # imprime: tick
+print(c.n)  # 2
+
+
+
