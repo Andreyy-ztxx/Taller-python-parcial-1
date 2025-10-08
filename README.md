@@ -202,8 +202,6 @@ Versión corregida (no filtra mutabilidad interna):
       def guardar(self, k, v):
            self.__repo.guardar(k, v)
 
-**20) Mini-kata ContadorSeguro**
-
 
   ### 20) Mini-kata `ContadorSeguro` (continuación)
 
